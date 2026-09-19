@@ -1,0 +1,208 @@
+.app-layout {
+  min-height: 100vh;
+  display: flex;
+  background: #f8f9fc;
+}
+
+/* =========================================
+   SIDEBAR
+========================================= */
+
+.sidebar {
+  width: 205px;
+  height: 100vh;
+  min-height: 100vh;
+
+  flex-shrink: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  position: sticky;
+  top: 0;
+
+  padding: 28px 14px 18px;
+
+  background: #ffffff;
+  border-right: 1px solid #e5e7eb;
+
+  box-sizing: border-box;
+}
+
+/* =========================================
+   LOGO
+========================================= */
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 0 10px;
+  margin-bottom: 34px;
+
+  color: #18253d;
+  font-size: 14px;
+  line-height: 1.15;
+}
+
+.logo > div {
+  line-height: 1.15;
+}
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.menu-item {
+  width: 100%;
+
+  border: none;
+  border-radius: 8px;
+
+  padding: 11px 12px;
+
+  background: transparent;
+  color: #374151;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  text-align: left;
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.menu-item:hover {
+  background: #f3f4ff;
+  color: #93C572;
+}
+
+.menu-item.active {
+  background: #eef0ff;
+  color: #93C572;
+  font-weight: 600;
+}
+
+/* =========================================
+   BOTTOM AREA
+========================================= */
+
+.sidebar-bottom {
+  margin-top: auto;
+}
+
+/* =========================================
+   USER
+========================================= */
+
+.sidebar-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 14px 8px;
+
+  border-top: 1px solid #e5e7eb;
+  margin-bottom: 6px;
+}
+
+.sidebar-user-avatar {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #93C572;
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.sidebar-user-info {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.sidebar-user-info strong {
+  color: #18253d;
+  font-size: 13px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sidebar-user-info span {
+  color: #6b7280;
+  font-size: 11px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* =========================================
+   LOGOUT
+========================================= */
+
+.logout-item {
+  color: #dc2626;
+}
+
+.logout-item:hover {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.layout-content {
+  flex: 1;
+  min-width: 0;
+  min-height: 100vh;
+
+  box-sizing: border-box;
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 800px) {
+  .sidebar {
+    width: 185px;
+  }
+}
+
+@media (max-width: 650px) {
+  .sidebar {
+    width: 170px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .logo {
+    padding-left: 6px;
+  }
+}
